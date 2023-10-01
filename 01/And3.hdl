@@ -1,0 +1,17 @@
+// This file is part of www.nand2tetris.org
+// and the book "The Elements of Computing Systems"
+// by Nisan and Schocken, MIT Press.
+// File name: projects/01/Not.hdl
+
+/**
+ *4 input and gate
+ */
+
+CHIP And3 {
+    IN a,b,c;
+    OUT out;
+
+    PARTS:
+    And(a = a, b = b, out = c1);
+    And(a = c, b = c1, out = out);
+}
